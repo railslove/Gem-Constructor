@@ -1,6 +1,10 @@
 $:.unshift(File.expand_path("../", __FILE__))
 
+# Gems
 require "erubis"
+
+# Files
+require "constructor/version"
 
 module Constructor
   module_function
@@ -20,7 +24,7 @@ module Constructor
   end
 
   def construct_rake_file
-    File.new("#{@lib_name}/RakeFile") do |file|
+    File.open("#{@lib_name}/RakeFile", "w") do |file|
       file.write(template("rake_file"))
     end
   end
@@ -33,12 +37,12 @@ module Constructor
     FileUtils.mkdir_p(spec_path + "/fixtures")
 
     # Spec helper
-    File.new("#{space_path}/spec_helper.rb") do |file|
+    File.open("#{spec_path}/spec_helper.rb", "w") do |file|
       file.write(erubis("spec_helper"))
     end
 
     # .rspec
-    File.new("#{@lib_name}/.rspec") do |file|
+    File.open("#{@lib_name}/.rspec", "w") do |file|
       file.write("--color")
       file.write("--profile")
     end
@@ -49,7 +53,7 @@ module Constructor
   end
 
   def erubis(template_name)
-    TinyEruby.new(template(template_name)).result(binding())
+    Erubis::Eruby.new(template(template_name)).result(binding())
   end
 
   def template(name)

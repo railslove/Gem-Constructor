@@ -6,13 +6,11 @@ Gem::Specification.new do |s|
   s.name        = "constructor"
   s.version     = Constructor::VERSION
   s.platform    = Gem::Platform::RUBY
-  s.authors     = ["TODO: Write your name"]
-  s.email       = ["TODO: Write your email address"]
+  s.authors     = ["Red Davis"]
+  s.email       = ["red@railslove.com"]
   s.homepage    = "http://rubygems.org/gems/constructor"
-  s.summary     = %q{TODO: Write a gem summary}
-  s.description = %q{TODO: Write a gem description}
-
-  s.rubyforge_project = "constructor"
+  s.summary     = %q{Gem skeleton builder using bundler and rspec}
+  s.description = %q{Gem skeleton builder using bundler and rspec}
 
   s.files         = `git ls-files`.split("\n")
   s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
