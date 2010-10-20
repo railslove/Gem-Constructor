@@ -1,7 +1,8 @@
 $:.unshift(File.expand_path("../", __FILE__))
 
-# Gems
+# Dependencies
 require "erubis"
+require "fileutils"
 
 # Files
 require "constructor/version"
@@ -14,6 +15,7 @@ module Constructor
 
     run_bundler
     construct_rake_file
+    construct_readme
     construct_specs
   end
 
@@ -26,6 +28,12 @@ module Constructor
   def construct_rake_file
     File.open("#{@lib_name}/RakeFile", "w") do |file|
       file.write(template("rake_file"))
+    end
+  end
+
+  def construct_readme
+    File.open("#{@lib_name}/README.md", "w") do |file|
+      file.write(template("readme"))
     end
   end
 
