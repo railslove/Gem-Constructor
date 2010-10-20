@@ -17,6 +17,8 @@ Gem::Specification.new do |s|
   s.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
   s.require_paths = ["lib"]
 
+  s.rubyforge_project = "constructor"
+
   s.add_dependency "bundler", "~> 1.0.3"
   s.add_dependency "erubis", "~> 2.6.6"
 
