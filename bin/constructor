@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 
 require "rubygems"
-require File.expand_path("../", __FILE__) + "/../lib/constructor"
+require File.expand_path("../", __FILE__) + "/../lib/gem_constructor"
 
 lib_name = ARGV[0]
-Constructor.construct(lib_name)
+GemConstructor.construct(lib_name)
