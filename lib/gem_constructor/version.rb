@@ -1,3 +1,3 @@
-module Constructor
+module GemConstructor
   VERSION = "0.0.2"
 end

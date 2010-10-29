@@ -5,9 +5,9 @@ require "erubis"
 require "fileutils"
 
 # Files
-require "constructor/version"
+require "gem_constructor/version"
 
-module Constructor
+module GemConstructor
   module_function
 
   def construct(lib_name)
@@ -65,6 +65,6 @@ module Constructor
   end
 
   def template(name)
-    File.read(File.expand_path("../", __FILE__) + "/constructor/templates/#{name}.erb")
+    File.read(File.expand_path("../", __FILE__) + "/gem_constructor/templates/#{name}.erb")
   end
 end
