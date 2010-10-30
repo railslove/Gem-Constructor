@@ -51,7 +51,7 @@ module GemConstructor
 
     # .rspec
     File.open("#{@lib_name}/.rspec", "w") do |file|
-      file.write("--color")
+      file.write("--color\n")
       file.write("--profile")
     end
   end
