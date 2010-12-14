@@ -4,27 +4,9 @@ Description
 
 ## How To Install
 
-    sudo gem install campfire_bot
+    gem install gem_name
 
 ## Example
-
-    require "rubygems"
-    require "campfire_bot"
-
-    Campfire::Bot.config do |bot|
-      # Login
-      bot.login do |l|
-        l.username = "username"
-        l.password = "password"
-        l.subdomain = "subdomain"
-        l.room = "room"
-      end
-
-      # Events
-      bot.on(/^How are you?/) do
-        bot.msg("Im very well thank-you")
-      end
-    end.start
 
 ## Note on Patches/Pull Requests
 
