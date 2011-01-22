@@ -9,7 +9,7 @@ This is a simple gem that adds to the default bundler gem generator by adding:
 
 ## How To Install
 
-    gem install constructor
+    gem install gem_constructor
 
 ## Example
 
