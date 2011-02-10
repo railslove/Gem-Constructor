@@ -33,7 +33,7 @@ module GemConstructor
 
   def construct_readme
     File.open("#{@lib_name}/README.md", "w") do |file|
-      file.write(template("readme"))
+      file.write(erubis("readme"))
     end
   end
 
